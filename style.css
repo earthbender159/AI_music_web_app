@@ -1,0 +1,31 @@
+.heading{
+    font-size: 23px; 
+    width: 100%; 
+    margin: 0px; 
+    background-color: #0d9f69;
+    color: white; 
+    font-family: 'Anek Malayalam', sans-serif;
+}
+.note{
+    font-size: 15px; 
+    color: black; 
+    font-family: 'Anek Malayalam', sans-serif;
+}
+body{
+    background-size: cover; 
+}
+.song_name{
+    float: right; 
+    background-color: #e5989b;
+    width: 130px; 
+    font-size: 25px;
+}
+#song_name{
+    font-size: 23px; 
+    margin: 15px; 
+    font-family: 'Anek Malayalam', sans-serif;
+}
+canvas{
+    border: 5px dashed #d5f2e3; 
+    border-radius: 20px; 
+}
