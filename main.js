@@ -36,39 +36,23 @@ function draw(){
     fill("#FF0000"); 
     stroke("#FF0000");  
     song1_status = song1.isPlaying(); 
-
-    if(song1_status == true){
-        song1.play(); 
-        document.getElementById("song_name").innerHTML = "playing Sugar_(getmp3.pro).mp3"; 
-    }
-    if(song1_status == false){
-        song1.stop(); 
-        document.getElementById("song_name").innerHTML = "playing Sugar_(getmp3.pro).mp3"; 
-    }
-
-    if(scoreleftWrist > 0.2){
-        circle(leftWristX, leftWristY, 20); 
-        InNumberleftWristY = Number(leftWristY); 
-        remove_decimals = floor(InNumberleftWristY); 
-    }
-
     song2_status = song2.isPlaying(); 
-
-    if(song2_status == true){
-        song2.play(); 
-        document.getElementById("song_name").innerHTML = "playing Heart_Of_Glass_(getmp3.pro).mp3"; 
-    }
-    if(song2_status == false){
-        song2.stop(); 
-        document.getElementById("song_name").innerHTML = "playing Heart_Of_Glass_(getmp3.pro).mp3"; 
-    }
-
-    if(scorerightWrist > 0.2){
+    if (scorerightWrist > 0.2){
         circle(rightWristX, rightWristY, 20); 
-        InNumberrightWristY = Number(rightWristY); 
-        remove_decimals = floor(InNumberrightWristY); 
+        song2.stop(); 
+        if(song1_status == false){
+            song1.play(); 
+            document.getElementById("song_name").innerHTML = "playing Heart_Of_Glass_(getmp3.pro).mp3"; 
         }
-
+    }
+    if (scoreleftWrist > 0.2){
+        circle(leftWristX, leftWristY, 20); 
+        song1.stop(); 
+        if(song2_status == false){
+            song2.play(); 
+            document.getElementById("song_name").innerHTML = "playing Sugar_(getmp3.pro).mp3"; 
+        }
+    }
 
 }
 
